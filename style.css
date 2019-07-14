@@ -1,0 +1,93 @@
+body{
+	background-color: black;
+	padding: 0;
+	margin: 0;
+}
+img{
+	width: 200px;
+	height: 200px;
+}
+#preload{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: 0;	
+	z-index: 1;
+}
+.load{
+	width:300px;
+	height: 70px;
+	margin: 150px auto 50px auto;
+	font-size: 50px;
+	text-align: center;
+	text-shadow: 1px 2px 2px white;
+	color: white;
+}
+.circle-holder{
+	width: 70px;
+	height: 70px;
+	margin: auto;
+	position: relative;
+}
+.circle-out, .circle-in , .circle-1 , .circle-2 , .circle-glow{
+	position: absolute;
+	border:5px solid transparent;
+	border-radius: 50px;
+}
+.circle-glow{
+	background-color: azure;
+	width: 10px;
+	height: 10px;
+	top:30px;
+	left: 30px;
+}
+
+.circle-out{
+	width: 70px;
+	height: 70px;
+	border-top: 5px solid azure;
+	border-bottom: 5px solid azure;
+	animation: clock-spin 2s linear 3;
+}
+.circle-in{
+	width: 60px;
+	height: 60px;
+	border-left: 5px solid #bf1515;
+	border-right: 5px solid #bf1515;
+	top:5px;
+	left: 5px;
+	animation: anticlock-spin 2s linear 3;
+}
+.circle-1{
+	width: 50px;
+	height: 50px;
+	border-top: 5px solid azure;
+	border-bottom: 5px solid azure;
+	top:10px;
+	left: 10px;
+	animation: clock-spin 2s linear 3;
+}
+.circle-2{
+	width: 40px;
+	height: 40px;
+	border-left: 5px solid #bf1515;
+	border-right: 5px solid #bf1515;
+	top:15px;
+	left: 15px;
+	animation: anticlock-spin 2s linear 3;
+}
+@keyframes clock-spin{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+@keyframes anticlock-spin{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}
+@keyframes fade-out{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+
